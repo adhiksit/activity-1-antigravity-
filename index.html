@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Public API Playground</title>
+    <meta name="description" content="A public API playground displaying Dog Pictures, Jokes, Random Users, and JSONPlaceholder Data.">
+    <!-- Google Fonts: Outfit -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="aurora-container">
+        <div class="aurora-blob aurora-1"></div>
+        <div class="aurora-blob aurora-2"></div>
+        <div class="aurora-blob aurora-3"></div>
+    </div>
+    
+    <header>
+        <h1>Public API Playground</h1>
+        <p>Explore different APIs in one modern interface.</p>
+    </header>
+
+    <main class="container">
+        <!-- Section 1: Dog Finder -->
+        <section class="api-card" id="dog-card">
+            <div class="card-header">
+                <h2>🐶 Dog Finder</h2>
+            </div>
+            <div class="card-content" id="dog-content">
+                <div class="placeholder">Click the button to get a random dog!</div>
+            </div>
+            <div class="card-actions">
+                <button id="btn-dog" class="primary-btn">Get Dog</button>
+            </div>
+            <!-- Loading overlay -->
+            <div class="loading-overlay" id="loading-dog" style="display: none;">
+                <div class="spinner"></div>
+            </div>
+        </section>
+
+        <!-- Section 2: Joke Generator -->
+        <section class="api-card" id="joke-card">
+            <div class="card-header">
+                <h2>😂 Joke Generator</h2>
+            </div>
+            <div class="card-content" id="joke-content">
+                <div class="placeholder">Need a laugh? Click below!</div>
+            </div>
+            <div class="card-actions">
+                <button id="btn-joke" class="primary-btn">Get Joke</button>
+            </div>
+            <!-- Loading overlay -->
+            <div class="loading-overlay" id="loading-joke" style="display: none;">
+                <div class="spinner"></div>
+            </div>
+        </section>
+
+        <!-- Section 3: Random User Profile -->
+        <section class="api-card" id="user-card">
+            <div class="card-header">
+                <h2>👤 Random User</h2>
+            </div>
+            <div class="card-content user-profile-container" id="user-content">
+                <div class="placeholder">Generate a random user profile.</div>
+            </div>
+            <div class="card-actions">
+                <button id="btn-user" class="primary-btn">Get User</button>
+            </div>
+            <!-- Loading overlay -->
+            <div class="loading-overlay" id="loading-user" style="display: none;">
+                <div class="spinner"></div>
+            </div>
+        </section>
+
+        <!-- Section 4: JSONPlaceholder -->
+        <section class="api-card" id="json-card">
+            <div class="card-header">
+                <h2>📝 JSONPlaceholder</h2>
+            </div>
+            <div class="card-content" id="json-content">
+                <div class="placeholder">Fetch the latest posts.</div>
+            </div>
+            <div class="card-actions">
+                <button id="btn-json" class="primary-btn">Get Posts</button>
+            </div>
+            <!-- Loading overlay -->
+            <div class="loading-overlay" id="loading-json" style="display: none;">
+                <div class="spinner"></div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Toast Notification for "Copy Image URL" functionality -->
+    <div id="toast" class="toast">Copied to clipboard!</div>
+</body>
+</html>
